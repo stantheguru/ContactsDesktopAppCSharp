@@ -117,6 +117,7 @@ namespace Contacts
             textID.Text = "";
             textSearch.Text = "";
             contactImage.Image = null;
+            textError.Text = "";
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -219,7 +220,7 @@ namespace Contacts
             string error = "";
             if (textID.Text == "")
             {
-                error = "Please select a contact to update";
+                error = "Please select a contact to delete";
             }
             else
             {
