@@ -50,15 +50,19 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textContactNumber = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnImage = new System.Windows.Forms.Button();
+            this.contactImage = new System.Windows.Forms.PictureBox();
+            this.textError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataContacts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contactImage)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(370, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(471, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -69,7 +73,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(61, 113);
+            this.label1.Location = new System.Drawing.Point(45, 113);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 21);
             this.label1.TabIndex = 1;
@@ -94,7 +98,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(61, 209);
+            this.label2.Location = new System.Drawing.Point(41, 209);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 21);
             this.label2.TabIndex = 3;
@@ -111,7 +115,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(61, 161);
+            this.label3.Location = new System.Drawing.Point(41, 165);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 21);
             this.label3.TabIndex = 5;
@@ -129,7 +133,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(61, 286);
+            this.label4.Location = new System.Drawing.Point(41, 286);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 21);
             this.label4.TabIndex = 7;
@@ -139,7 +143,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(63, 373);
+            this.label5.Location = new System.Drawing.Point(41, 373);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 21);
             this.label5.TabIndex = 9;
@@ -160,7 +164,7 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.ForestGreen;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(69, 424);
+            this.btnAdd.Location = new System.Drawing.Point(375, 482);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(89, 41);
             this.btnAdd.TabIndex = 11;
@@ -172,7 +176,7 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(206, 424);
+            this.btnUpdate.Location = new System.Drawing.Point(512, 482);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(89, 41);
             this.btnUpdate.TabIndex = 12;
@@ -184,7 +188,7 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(370, 424);
+            this.btnDelete.Location = new System.Drawing.Point(676, 482);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(89, 41);
             this.btnDelete.TabIndex = 13;
@@ -196,7 +200,7 @@
             // 
             this.btnClear.BackColor = System.Drawing.Color.DarkOrange;
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(524, 424);
+            this.btnClear.Location = new System.Drawing.Point(830, 482);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(89, 41);
             this.btnClear.TabIndex = 14;
@@ -210,7 +214,7 @@
             this.dataContacts.Location = new System.Drawing.Point(373, 161);
             this.dataContacts.Name = "dataContacts";
             this.dataContacts.RowTemplate.Height = 25;
-            this.dataContacts.Size = new System.Drawing.Size(547, 233);
+            this.dataContacts.Size = new System.Drawing.Size(688, 233);
             this.dataContacts.TabIndex = 15;
             this.dataContacts.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataContacts_RowHeaderMouseClick);
             // 
@@ -218,7 +222,7 @@
             // 
             this.textSearch.Location = new System.Drawing.Point(471, 113);
             this.textSearch.Name = "textSearch";
-            this.textSearch.Size = new System.Drawing.Size(449, 23);
+            this.textSearch.Size = new System.Drawing.Size(590, 23);
             this.textSearch.TabIndex = 17;
             this.textSearch.TextChanged += new System.EventHandler(this.textSearch_TextChanged);
             // 
@@ -235,9 +239,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(856, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(1045, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 46);
+            this.pictureBox2.Size = new System.Drawing.Size(39, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
@@ -254,17 +258,48 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(63, 251);
+            this.label7.Location = new System.Drawing.Point(41, 251);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(125, 21);
             this.label7.TabIndex = 20;
             this.label7.Text = "Contact Number";
             // 
+            // btnImage
+            // 
+            this.btnImage.Location = new System.Drawing.Point(41, 424);
+            this.btnImage.Name = "btnImage";
+            this.btnImage.Size = new System.Drawing.Size(95, 23);
+            this.btnImage.TabIndex = 22;
+            this.btnImage.Text = "Select Image";
+            this.btnImage.UseVisualStyleBackColor = true;
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
+            // 
+            // contactImage
+            // 
+            this.contactImage.Location = new System.Drawing.Point(191, 424);
+            this.contactImage.Name = "contactImage";
+            this.contactImage.Size = new System.Drawing.Size(151, 99);
+            this.contactImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.contactImage.TabIndex = 23;
+            this.contactImage.TabStop = false;
+            // 
+            // textError
+            // 
+            this.textError.AutoSize = true;
+            this.textError.ForeColor = System.Drawing.Color.Red;
+            this.textError.Location = new System.Drawing.Point(407, 428);
+            this.textError.Name = "textError";
+            this.textError.Size = new System.Drawing.Size(0, 15);
+            this.textError.TabIndex = 24;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 493);
+            this.ClientSize = new System.Drawing.Size(1086, 535);
+            this.Controls.Add(this.textError);
+            this.Controls.Add(this.contactImage);
+            this.Controls.Add(this.btnImage);
             this.Controls.Add(this.textContactNumber);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox2);
@@ -293,6 +328,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataContacts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contactImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,5 +357,8 @@
         private PictureBox pictureBox2;
         private TextBox textContactNumber;
         private Label label7;
+        private Button btnImage;
+        private PictureBox contactImage;
+        private Label textError;
     }
 }

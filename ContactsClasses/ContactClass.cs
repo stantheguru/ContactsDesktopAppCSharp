@@ -24,6 +24,8 @@ namespace Contacts.ContactsClasses
 
         public string Gender { get; set; }
 
+        public string Image { get; set; }
+
         static string myconnstring = ConfigurationManager.ConnectionStrings["connString"].ConnectionString;
 
         //select data from db
@@ -66,7 +68,7 @@ namespace Contacts.ContactsClasses
             SqlConnection conn = new SqlConnection(myconnstring);
             try
             {
-                string sql = "INSERT INTO tbl_contact (FirstName,LastName,ContactNumber,Address,Gender) VALUES(@FirstName,@LastName,@ContactNumber,@Address,@Gender)";
+                string sql = "INSERT INTO tbl_contact (FirstName,LastName,ContactNumber,Address,Gender,Image) VALUES(@FirstName,@LastName,@ContactNumber,@Address,@Gender,@Image)";
 
                 //ceating sql command using sql and conn'
                 SqlCommand sqlCommand = new SqlCommand(sql, conn);
@@ -77,6 +79,7 @@ namespace Contacts.ContactsClasses
                 sqlCommand.Parameters.AddWithValue("@ContactNumber", c.ContactNumber);
                 sqlCommand.Parameters.AddWithValue("@Address", c.Address);
                 sqlCommand.Parameters.AddWithValue("@Gender", c.Gender);
+                sqlCommand.Parameters.AddWithValue("@Image", c.Image);
 
                 //open connection
                 conn.Open();
@@ -114,7 +117,7 @@ namespace Contacts.ContactsClasses
             SqlConnection conn = new SqlConnection(myconnstring);
             try
             {
-                string sql = "UPDATE tbl_contact SET FirstName=@FirstName,LastName=@LastName,ContactNumber=@ContactNumber,Address=@Address,Gender=@Gender Where ContactID=@ContactID";
+                string sql = "UPDATE tbl_contact SET FirstName=@FirstName,LastName=@LastName,ContactNumber=@ContactNumber,Address=@Address,Gender=@Gender,Image=@Image Where ContactID=@ContactID";
 
                 //sql command
                 SqlCommand sqlCommand = new SqlCommand(sql, conn);
@@ -124,7 +127,9 @@ namespace Contacts.ContactsClasses
                 sqlCommand.Parameters.AddWithValue("@ContactNumber", c.ContactNumber);
                 sqlCommand.Parameters.AddWithValue("@Address", c.Address);
                 sqlCommand.Parameters.AddWithValue("@Gender", c.Gender);
+                sqlCommand.Parameters.AddWithValue("@Image", c.Image);
                 sqlCommand.Parameters.AddWithValue("@ContactID", c.ContactID);
+
 
                 //open connection
                 conn.Open();
